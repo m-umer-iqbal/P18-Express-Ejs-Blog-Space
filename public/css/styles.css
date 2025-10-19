@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .container-fluid {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -35,4 +39,27 @@
     margin-top: 25px;
     font-size: 12px;
     opacity: 0.7;
+}
+
+/* Change font style in Posts dropdown */
+.dropdown-menu a.dropdown-item {
+    font-family: "Poppins", sans-serif;
+    /* or any font you like */
+    font-size: 16px;
+    font-weight: 500;
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 250px;
+    color: #333;
+    /* normal text color */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Change background and text color on hover */
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #CBB279;
+    /* your desired hover color */
+    color: white;
+    /* text color on hover */
 }
