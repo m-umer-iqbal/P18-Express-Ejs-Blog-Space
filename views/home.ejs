@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p>
+    <%= homeStartingContent %>
+</p>
+
+<div class="posts posts-container">
+    <% posts.forEach((post)=>{ %>
+        <div class="post">
+            <h3><%= post.title %></h3>
+            <p class="post-text d-inline-block"><%= post.body %></p>
+            <a class="link-opacity-100-hover read-more-btn" style="display:none; cursor: pointer;" href="/posts/<%= _.kebabCase(post.title) %>">Read More</a>
+        </div>
+    <% }) %>
+</div>
+
+<script>
+    // select all posts
+    const paragraphs = document.querySelectorAll(".post-text");
+    const buttons = document.querySelectorAll(".read-more-btn");
+
+    paragraphs.forEach((paragraph, index) => {
+        const fullText = paragraph.innerText;
+        const shortText = fullText.slice(0, 100);
+
+        if (fullText.length > 100) {
+            // show only short version
+            paragraph.innerText = shortText + "...";
+            buttons[index].style.display = "inline-block";
+        }
+    });
+</script>
+
+<%- include("partials/footer") -%>
