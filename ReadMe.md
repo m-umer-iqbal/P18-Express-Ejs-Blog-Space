@@ -14,7 +14,7 @@ A simple and elegant blog platform built with Node.js, Express, and EJS where yo
 
 - **Backend**: Node.js, Express.js
 - **Frontend**: EJS templating engine
-- **Styling**: CSS3
+- **Styling**: CSS3, Bootstrap
 - **Server**: Built-in Node.js server
 
 ## 🚀 Quick Start
